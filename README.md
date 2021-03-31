@@ -17,7 +17,7 @@
 - airbnb
 - Instagram
 
-⋅⋅\* **Components**
+### **Components**
 
 ## What is a Component?
 
@@ -46,7 +46,7 @@ A component can contain multiple components (children) so we end up with a compo
 
 ## Types of Components
 
-- Class Component
+### Class Component
 
 ```javascript
 import React, { Component } from "react";
@@ -75,7 +75,7 @@ export default App;
 
 ### Class components MUST have a render method!
 
-- functional component
+### functional component
 
 ```javascript
 import React from "react";
@@ -97,7 +97,7 @@ export default HelloWild;
 
 ## JSX
 
-⋅⋅\* What is JSX?
+### What is JSX?
 
 It is a syntax extension to JavaScript. It is used with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript. It looks like HTML but in essence it combines HTML and JavaScript together.
 
@@ -141,7 +141,7 @@ It’s easier and faster to get started.
 
 # React - Props
 
-- What are Props?
+### What are Props?
 
 “Props” is a special keyword in React, which stands for properties and they are used for passing data from one component to another. Furthermore, props data is read-only, which means that data coming from the Parent should not be changed by Child components.
 
