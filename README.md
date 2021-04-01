@@ -248,3 +248,108 @@ const Article = ({ title, text }) => (
 ```
 
 - In the example, the Article component receives a title and a text as individual props.
+
+## API
+
+- What's an **API**?
+
+An API (Application Programming Interface) serves as a middleware that lets you channel data between software products.
+It is a server that exposes data and functions through the HTTP protocol.
+
+You can use it to define requests that have been made, handle business logic, the and manage data formats that should be used and the conventions to adhere to when building software products.
+
+- Why do we need **API's** ?
+
+APIs make it easier to access to a variety of resources. They also allow cross-platform communication which solves certain business logic.
+
+As webservices usually respond with raw data (formatted in JSON), the API client is free to display the data however he wants.
+
+An API can provide data you need without requiring extra research or manipulation which speeds up the development process.
+They also provide user-friendly endpoints specific to certain use cases.
+
+- API Tools:
+  **POSTMAN**
+  A collaboration platform for API development.
+  Simplify each step of building an API and streamline collaboration so you can create better APIs—faster.
+
+**REST**
+This tool simplifies testing API endpoints in Java – yes JAVA. It tests and validates responses, making it seamless for Java devs to test APIs.
+
+## Express
+
+../\* **Express** is a framework for Node.js that gives us access to a lot of powerful and simple tools that we can use to create and configure our server quickly.
+
+It allows rapid development of Webservices as it provides straightforward ways to handle HTTP requests.
+
+- Avantages Perks of Express.js:
+  Well documented
+  Big community
+  Performant
+  Lightweight
+  Unopinionated
+
+- How to install it?
+  Step 1
+  $ mkdir my-api
+  $ cd my-api
+  $ touch index.js
+
+Step 2
+$ npm init && git init
+
+Step 3
+$ npm install express
+
+- Why we use **Nodemon**?
+  Reloading your server all the time can be quite annoying, to avoid that, you can use a Node package called Nodemon.
+  Nodemon will listen for changes in your files and will automatically reload the server.
+
+- How to install **Nodemon**?
+  Step 1
+  $ npm install nodemon --save-dev
+
+Step 2
+"scripts": {
+"start": "nodemon index.js"
+}
+
+Step 3
+<img src="https://i.imgur.com/vkF1kBZ.png">
+
+- How to create a route?
+
+const express = require("express");
+const app = express();
+
+const port = 3000;
+
+app.get("/", (request, response) => {
+console.log(request);
+response.send("Welcome to Express");
+});
+
+app.listen(port, () => {
+console.log(`Server is runing on ${port}`);
+});
+
+- What's a **Request** ?
+  The request object represents the HTTP request. It contains information such as:
+  HTTP header,
+  The request body (what is sent with the request),
+  Form data,
+  Url params and query string, ...
+
+- What's a **Query String** ?
+  The query property is an object that will contain a property for each query string passed in the URL.
+
+Example:
+// GET /search?name=tobi+ferret
+res.send(request.query.name)
+// => 'tobi ferret'
+
+// GET /shoes?order=desc&color=blue
+res.send(req.query.color)
+// => 'blue'
+
+- What's a **Response** ?
+  The response object represents the HTTP response that the server sends to the client. It can contain data, messages (validation, error), or simply a status corresponding to the state of the request processed by the server.
