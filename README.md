@@ -290,15 +290,23 @@ It allows rapid development of Webservices as it provides straightforward ways t
 
 - How to install it?
   Step 1
+  ```
   $ mkdir my-api
   $ cd my-api
   $ touch index.js
+  ```
 
 Step 2
+
+```
 $ npm init && git init
+```
 
 Step 3
+
+```
 $ npm install express
+```
 
 - Why we use **Nodemon**?
   Reloading your server all the time can be quite annoying, to avoid that, you can use a Node package called Nodemon.
@@ -306,12 +314,17 @@ $ npm install express
 
 - How to install **Nodemon**?
   Step 1
+  ```
   $ npm install nodemon --save-dev
+  ```
 
 Step 2
+
+```
 "scripts": {
 "start": "nodemon index.js"
 }
+```
 
 Step 3
 <img src="https://i.imgur.com/vkF1kBZ.png">
